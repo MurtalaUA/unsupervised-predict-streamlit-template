@@ -45,7 +45,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview"]
+    page_options = ["Recommender System","Solution Overview","About Us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -54,7 +54,7 @@ def main():
     if page_selection == "Recommender System":
         # Header contents
         st.write('# Movie Recommender Engine')
-        st.write('### EXPLORE Data Science Academy Unsupervised Predict')
+        st.write('### NM3 Data Systems')
         st.image('resources/imgs/Image_header.png',use_column_width=True)
         # Recommender System algorithm selection
         sys = st.radio("Select an algorithm",
@@ -102,11 +102,28 @@ def main():
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.write("Our solution is built to give your users a highly accurate recommendation. The solution is developed to make recommendations using both content based recommendations and collaborative based recommendations.")
+        st.write("With its high accuracy rating when making recommendations, the solution is also easy to use. We spared no effort in making sure that any one can make use of the solution even if it is the first time the user is coming in contact with it.")
+        st.write("In order to make sure your needs are met whenever they come up, we have customer support running 24 hours every day of the week. Sit back, relax and see your user interaction improve with an accompanying revenue boost.")         
+        st.write("NM3 Data Systems, providing solutions to your problems.")
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
+    # Our contact for enquiries
 
+    if page_selection == "About Us":
+        st.title("About Us")
+        st.write("NM3 Data Systems Ltd. is a data solutions company, specializing in prediction models and recommender engines. We are headquartered in Abuja, Nigeria. Our team members include Harmony Odumuko (CEO), Murtala Umar Adamu (CTO), Njoku Okechukwu Valentine, Prince-Charles, Akinbo-Taylor and Abdulwasiu Inusa.")
+        st.write("Our vision is to become the leading IT company in Africa by solving the most pressing challenges faced by our clients through innovative solutions that help them grow their businesses faster and more efficiently than ever before.")
+        st.subheader("Contact info")
+        st.write("Cola Street, Near ATTC,")
+        st.write("ICT Hub, Central Business District,\
+            Abuja, P.O. Box AN0000, Nigeria")
+        st.write("Telephone:+234 00 111 2222")
+        st.write("WhatsApp:+234 210 12344 1390")
+        st.write("Email: contact@datasytems.com")
+        st.write("Website: www.datasytems.com") 
 
+    
 if __name__ == '__main__':
     main()
