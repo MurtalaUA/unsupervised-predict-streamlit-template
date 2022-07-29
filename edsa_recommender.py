@@ -26,6 +26,7 @@
 
 """
 # Streamlit dependencies
+from PIL import Image
 import streamlit as st
 
 # Data handling dependencies
@@ -105,6 +106,30 @@ def main():
         st.write("Our solution is built to give your users a highly accurate recommendation. The solution is developed to make recommendations using both content based recommendations and collaborative based recommendations.")
         st.write("With its high accuracy rating when making recommendations, the solution is also easy to use. We spared no effort in making sure that any one can make use of the solution even if it is the first time the user is coming in contact with it.")
         st.write("In order to make sure your needs are met whenever they come up, we have customer support running 24 hours every day of the week. Sit back, relax and see your user interaction improve with an accompanying revenue boost.")         
+        
+        # EDA Images
+       
+        genres = Image.open('resources/imgs/movies_by_genre.png')
+        production_year = Image.open('resources/imgs/movies_by_production_year.png')
+        top_rated = Image.open('resources/imgs/Top_rated_movies.png')
+
+        # Exploratory Data Analysis
+        st.subheader("Insight from the Data - EDA")
+        st.write("Below are insights into the dataset used in developing our solution.")
+        
+        # Genres
+        st.image(genres)
+        st.write("The graph shows the genres of movies in the data set. We can see that users watch more of dramas, comedies and thrillers")
+
+        # production year
+        st.image(production_year)
+        st.write("Insight from our data shows that over 1750 movies were produced in the year 2015. This period represents the most active year of movie production.")
+
+        # Top rated movies
+        st.image(top_rated)
+        st.write("The most top rated movie in our data set is Shawshank Redemption produced in 1994. The graph shows the 20 most top rated movies.")
+        
+        
         st.write("NM3 Data Systems, providing solutions to your problems.")
 
     # You may want to add more sections here for aspects such as an EDA,
